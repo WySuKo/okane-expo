@@ -3,6 +3,7 @@ import Dashboard from "../pages/Dashboard";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { NavigationContainer } from "@react-navigation/native";
 import Splash from "../pages/Splash";
+import NouvelleCategorie from "../pages/NouvelleCategorie"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -34,6 +35,15 @@ const UserTab = () => {
 					tabBarIcon: (
 						{ color, size } // TODO focused
 					) => <Ionicons name="home" color={color} size={size} />,
+				}}
+			/>
+			<Tab.Screen
+				name="Nouvelle Categorie"
+				component={NouvelleCategorie}
+				options={{
+					tabBarIcon: (
+						{ color, size } // TODO focused
+					) => <Ionicons name="add-circle-outline" color={color} size={size} />,
 				}}
 			/>
 		</Tab.Navigator>
